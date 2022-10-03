@@ -1,0 +1,107 @@
+.container {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #051736;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.color {
+  width: 506px;
+  height: 319px;
+  border-radius: 30px;
+}
+
+.card {
+  width: 506px;
+  height: 319px;
+  position: relative;
+  background: radial-gradient(
+    140% 140% at 0% 0%,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-top: 1px solid #eeeded70;
+  border-left: 1px solid #eeeded70;
+  border-radius: 30px;
+  backdrop-filter: blur(30px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.bank {
+  color: #ffffff;
+  font-size: 28px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.chip {
+  width: 50px;
+  position: absolute;
+  top: 100px;
+  left: 40px;
+}
+
+.indicator {
+  width: 50px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+
+.number {
+  color: #ffffff;
+  font-size: 36px;
+  font-family: "Economica";
+  word-spacing: 15px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  position: absolute;
+  bottom: 100px;
+  left: 30px;
+}
+
+.card-holder {
+  color: #ffffff;
+  font-size: 14px;
+  /* font-family: cursive; */
+  font-weight: 700;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  text-transform: uppercase;
+}
+
+.card-holder span {
+  font-size: 10px;
+  /* font-family: "Mulish", sans-serif; */
+  font-weight: 400;
+}
+
+.valid {
+  color: #ffffff;
+  font-size: 15px;
+  /* font-family: "ocr extended"; */
+  font-weight: 400;
+  position: absolute;
+  bottom: 30px;
+  left: 220px;
+  text-transform: uppercase;
+}
+
+.valid span {
+  font-size: 10px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+}
+
+.logo {
+  width: 70px;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
