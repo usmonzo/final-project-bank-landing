@@ -15,7 +15,7 @@ import {
 } from "./SignInElements";
 import logo from "./logo.svg";
 
-function SignIn({ Login, error }) {
+function SignIn({ Login }) {
   const [details, setdDetails] = useState({ username: "", password: "" });
 
   const submitHandler = (e) => {

@@ -8,7 +8,6 @@ function SignInPage() {
     password: "usmonzo",
   };
   const [user, setUser] = useState({ username: "", password: "" });
-  const [error, setError] = useState("");
 
   const Login = (details) => {
     console.log(details);
@@ -35,7 +34,7 @@ function SignInPage() {
       {user.username !== "" ? (
         <UserPage Logout={Logout} />
       ) : (
-        <SignIn Login={Login} error={error} />
+        <SignIn Login={Login} />
       )}
     </>
   );
