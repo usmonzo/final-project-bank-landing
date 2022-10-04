@@ -196,7 +196,7 @@ export const Color = styled.div`
     border-radius: 14px;
   }
   @media screen and (max-width: 420px) {
-    max-width: 340px;
+    max-width: 330px;
     max-height: 195px;
     border-radius: 14px;
   }
@@ -248,7 +248,7 @@ export const Card = styled.div`
     border-radius: 14px;
   }
   @media screen and (max-width: 420px) {
-    max-width: 340px;
+    max-width: 330px;
     max-height: 195px;
     border-radius: 14px;
   }
