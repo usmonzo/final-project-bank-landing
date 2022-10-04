@@ -7,7 +7,7 @@ export const HeaderContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 50px;
+  padding: 0 10px;
   height: 800px;
   position: relative;
   z-index: 1;
@@ -50,12 +50,13 @@ export const VideoBg = styled.video`
   -o-object-fit: cover;
   object-fit: cover;
   background: #232e34;
+  overflow: hidden;
 `;
 
 export const HeaderContent = styled.div`
   z-index: 3;
   max-width: 1200px;
-  position: absolute;
+  position: relative;
   padding: 9px 24px;
   display: flex;
   flex-direction: row;
@@ -65,6 +66,9 @@ export const HeaderContent = styled.div`
 
   @media screen and (max-width: 975px) {
     flex-direction: column;
+  }
+  @media screen and (max-width: 450px) {
+    padding: 0;
   }
 `;
 
@@ -86,18 +90,22 @@ export const HeaderH1 = styled.h1`
   @media screen and (max-width: 480px) {
     font-size: 32px;
   }
+  @media screen and (max-width: 400px) {
+    font-size: 28px;
+  }
 `;
 
 export const HeaderP = styled.p`
+  padding: 10px 0px;
   margin-top: 20px;
   color: #fbfaf5;
   font-size: 24px;
   text-align: left;
   max-width: 600px;
+  width: 100%;
 
   @media screen and (max-width: 900px) {
     font-size: 20px;
-    /* padding-bottom: 10px; */
     text-align: center;
   }
 
@@ -107,9 +115,17 @@ export const HeaderP = styled.p`
   @media screen and (max-width: 480px) {
     font-size: 18px;
   }
+  @media screen and (max-width: 430px) {
+    font-size: 13px;
+  }
+  @media screen and (max-width: 400px) {
+    font-size: 12px;
+    width: 378px;
+  }
 `;
 
 export const HeaderText = styled.div`
+  /* margin: 10px; */
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -122,26 +138,30 @@ export const HeaderText = styled.div`
 `;
 
 export const HeaderImg = styled.div`
-  display: flex;
+  position: relative;
+  display: grid;
   justify-content: center;
   align-items: center;
+  padding: 0;
+  margin: 0;
 `;
 export const Img = styled.img`
-  width: 90%;
+  width: 50%;
 
-  @media screen and (max-width: 800px) {
-    padding-top: 100px;
-    width: 80%;
+  @media screen and (max-width: 975px) {
+    width: 70%;
+    padding-top: 10px;
   }
 `;
 export const ImgB = styled.img`
-  width: 90%;
-  padding-top: 20px;
+  width: 100%;
+  padding: 5px;
+  margin-top: 10px;
 
-  @media screen and (max-width: 800px) {
+  /* @media screen and (max-width: 800px) {
     width: 80%;
     padding-top: 20px;
-  }
+  } */
 `;
 
 export const HeaderBtnWrapper = styled.div`
@@ -149,14 +169,20 @@ export const HeaderBtnWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  /* justify-content: center; */
 `;
 
 export const HeaderButton = styled(LinkRouter)`
-  width: 200px;
-  max-height: 60px;
-  height: 100%;
+  max-width: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media screen and (max-width: 800px) {
     gap: 8px;
+  }
+  @media screen and (max-width: 470px) {
+    gap: 0px;
   }
 `;

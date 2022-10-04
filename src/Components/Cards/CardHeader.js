@@ -6,7 +6,6 @@ import {
   HeaderContainer,
   HeaderContent,
   HeaderH1,
-  HeaderImg,
   HeaderP,
   HeaderText,
   Img,
@@ -25,9 +24,9 @@ function CardHeader() {
         <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
       </HeaderBg>
       <HeaderContent>
-        <HeaderImg>
-          <Img src={mobile1} />
-        </HeaderImg>
+        {/* <HeaderImg> */}
+        <Img src={mobile1} />
+        {/* </HeaderImg> */}
         <HeaderText>
           <HeaderH1>Иновационный банкинг</HeaderH1>
           <HeaderP>

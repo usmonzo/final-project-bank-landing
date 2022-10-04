@@ -20,7 +20,7 @@ import {
 } from "./CardInfoElements";
 import card from "./images/card.png";
 import { BsCashStack, BsCashCoin } from "react-icons/bs";
-import { BiTransfer } from "react-icons/bi";
+// import { BiTransfer } from "react-icons/bi";
 import { BsCurrencyExchange } from "react-icons/bs";
 import { TbCashOff } from "react-icons/tb";
 
@@ -72,10 +72,10 @@ const CardsInfoSection = () => {
                 Снятие наличных из любой точки мира без{" "}
                 <span style={{ color: "#2673e2" }}>%</span>.
               </Subtitle>
-              <Subtitle>
+              {/* <Subtitle>
                 <BiTransfer size="2em" /> Самые быстрые переводы с карты на
                 карту, не теряй ни секунды.
-              </Subtitle>
+              </Subtitle> */}
               <Subtitle>
                 <BsCurrencyExchange size="2em" />
                 <span style={{ color: "#2673e2" }}>Мультивалютность:</span>{" "}

@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const ContentWrapper = styled.div`
-  background: #fff;
+  background: #f2f3f4;
   /* height: 900px; */
-  max-width: 1400px;
+  max-width: 1300px;
 
   display: flex;
   flex-direction: column;
@@ -27,21 +27,24 @@ export const CardTitle = styled.h1`
 export const ButtonsWrapper = styled.div`
   background: #f2f3f4;
   max-width: 400px;
-
   display: flex;
   flex-direction: row;
   justify-content: center;
   /* gap: 10px; */
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  margin-bottom: 50px;
 `;
 
 export const Btns = styled.div`
+  margin-top: 10px;
   padding: 5px 20px;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: 1fr;
   gap: 15px;
+
+  @media screen and (max-width: 375px) {
+    gap: 10px;
+  }
 `;
 
 export const ButtonBlack = styled.button`
@@ -175,27 +178,37 @@ export const Color = styled.div`
   @media screen and (max-width: 630px) {
     max-width: 405px;
     max-height: 249px;
-    border-radius: 29px;
+    border-radius: 20px;
   }
   @media screen and (max-width: 550px) {
     max-width: 395px;
     max-height: 239px;
-    border-radius: 29px;
+    border-radius: 20px;
   }
   @media screen and (max-width: 500px) {
     max-width: 365px;
     max-height: 229px;
-    border-radius: 29px;
+    border-radius: 20px;
   }
   @media screen and (max-width: 450px) {
     max-width: 360px;
     max-height: 215px;
-    border-radius: 29px;
+    border-radius: 14px;
   }
   @media screen and (max-width: 420px) {
     max-width: 340px;
     max-height: 195px;
-    border-radius: 29px;
+    border-radius: 14px;
+  }
+  @media screen and (max-width: 401px) {
+    max-width: 308px;
+    max-height: 185px;
+    border-radius: 14px;
+  }
+  @media screen and (max-width: 380px) {
+    max-width: 2900px;
+    max-height: 175px;
+    border-radius: 19px;
   }
 `;
 
@@ -217,22 +230,37 @@ export const Card = styled.div`
   @media screen and (max-width: 630px) {
     max-width: 405px;
     max-height: 245px;
+    border-radius: 20px;
   }
   @media screen and (max-width: 550px) {
     max-width: 395px;
     max-height: 239px;
+    border-radius: 20px;
   }
   @media screen and (max-width: 500px) {
     max-width: 365px;
     max-height: 229px;
+    border-radius: 20px;
   }
   @media screen and (max-width: 450px) {
     max-width: 360px;
     max-height: 210px;
+    border-radius: 14px;
   }
   @media screen and (max-width: 420px) {
     max-width: 340px;
     max-height: 195px;
+    border-radius: 14px;
+  }
+  @media screen and (max-width: 401px) {
+    max-width: 308px;
+    max-height: 185px;
+    border-radius: 14px;
+  }
+  @media screen and (max-width: 380px) {
+    max-width: 290px;
+    max-height: 175px;
+    border-radius: 20px;
   }
 `;
 
@@ -275,6 +303,11 @@ export const CardiChip = styled.img`
     top: 38px;
     left: 40px;
   }
+  @media screen and (max-width: 420px) {
+    width: 25px;
+    top: 30px;
+    left: 35px;
+  }
 `;
 
 export const CardIndicator = styled.img`
@@ -294,8 +327,8 @@ export const CardIndicator = styled.img`
   }
   @media screen and (max-width: 420px) {
     width: 20px;
-    top: 40px;
-    left: 70px;
+    top: 32px;
+    left: 63px;
   }
 `;
 
@@ -346,6 +379,11 @@ export const CardH5 = styled.h5`
     font-size: 9px;
     left: 32px;
   }
+  @media screen and (max-width: 401px) {
+    font-size: 9px;
+    bottom: 20px;
+    left: 25px;
+  }
 `;
 export const CardH6 = styled.h6`
   color: #ffffff;
@@ -366,6 +404,11 @@ export const CardH6 = styled.h6`
     font-size: 9px;
     left: 205px;
   }
+  @media screen and (max-width: 401px) {
+    font-size: 9px;
+    bottom: 21px;
+    left: 190px;
+  }
 `;
 
 export const CardSpan = styled.span`
@@ -377,6 +420,9 @@ export const CardSpan = styled.span`
   }
   @media screen and (max-width: 450px) {
     font-size: 8px;
+  }
+  @media screen and (max-width: 401px) {
+    font-size: 6px;
   }
 `;
 
@@ -391,6 +437,9 @@ export const CardVisa = styled.img`
   @media screen and (max-width: 450px) {
     width: 40px;
   }
+  @media screen and (max-width: 401px) {
+    width: 35px;
+  }
 `;
 //                     //
 //                     //
@@ -400,98 +449,36 @@ export const CardVisa = styled.img`
 //                     //
 //                     //
 export const CardsInfoContainer = styled.div`
-  color: #fbfaf5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #f2f3f4;
   transition: 0.2s all ease-in-out;
-  padding: 50px 0;
-
-  @media screen and (max-width: 768px) {
-    padding: 170px 0;
-  }
-  @media screen and (max-width: 550px) {
-    padding: 220px 0;
-  }
-  @media screen and (max-width: 480px) {
-    padding: 70px 0;
-  }
-  @media screen and (max-width: 430px) {
-    padding: 100px 0;
-  }
-  @media screen and (max-width: 409px) {
-    padding: 150px 0;
-  }
-  @media screen and (max-width: 400px) {
-    padding: 200px 0;
-  }
-  @media screen and (max-width: 379px) {
-    padding: 300px 0;
-  }
-  @media screen and (max-width: 365px) {
-    padding: 400px 0;
-  }
+  padding: 0;
+  max-height: 1500px;
 `;
 
 export const InfoForm = styled.div`
   padding: 50px;
-  margin: 50px;
+  margin: 0 20px;
   border-radius: 15px;
 
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
-  position: relative;
-
-  @media screen and (max-width: 768px) {
-    margin-top: 200px;
-  }
-  @media screen and (max-width: 630px) {
-    padding: 40px;
-  }
-  @media screen and (max-width: 550px) {
-    padding: 30px;
-  }
-  @media screen and (max-width: 500px) {
-    padding: 23px;
-  }
-  @media screen and (max-width: 450px) {
-    padding: 20px;
-  }
 `;
 export const CardsInfoWrapper = styled.div`
-  display: grid;
-  z-index: 1;
-  max-height: 1300px;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 1100px;
-  margin-top: 300px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0 24px;
-  justify-content: center;
+  margin: 50px auto;
 
-  @media screen and (max-width: 630px) {
-    margin-top: 0px;
-  }
-  @media screen and (max-width: 531px) {
-    margin-top: 100px;
-  }
-  @media screen and (max-width: 480px) {
-    margin-top: 30px;
-  }
-  /* @media screen and (max-width: 630px) {
-    padding: 40px;
-  }
-  @media screen and (max-width: 550px) {
-    padding: 30px;
-  }
-  @media screen and (max-width: 500px) {
-    padding: 23px;
-  }
-  @media screen and (max-width: 450px) {
-    padding: 20px;
-  } */
+  /* padding: 0 24px; */
+  justify-content: center;
 `;
 
 export const HeadlineH1 = styled.h1`
@@ -547,6 +534,9 @@ export const Stackk = styled.div`
     justify-content: center;
     /* align-items: center; */
   }
+  @media screen and (max-width: 361px) {
+    padding: 5px;
+  }
 `;
 export const Stackkk = styled.form`
   display: flex;
@@ -565,5 +555,10 @@ export const Stackkk = styled.form`
   @media screen and (max-width: 420px) {
     padding: 25px 0px 15px 0px;
     margin: 0 auto;
+  }
+  @media screen and (max-width: 375px) {
+    padding: 25px auto 15px auto;
+    margin: 0 auto;
+    width: 300px;
   }
 `;

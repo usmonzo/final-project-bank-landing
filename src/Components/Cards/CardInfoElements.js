@@ -1,29 +1,23 @@
 import styled from "styled-components";
 
 export const InfoContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 20px;
   /* border-bottom: 1px solid black; */
   color: #fbfaf5;
   background: #f2f3f4;
   transition: 0.2s all ease-in-out;
-
-  @media screen and (max-width: 768px) {
-    padding: 130px 0;
-  }
-  @media screen and (max-width: 601px) {
-    padding: 100px 0;
-  }
-  @media screen and (max-width: 501px) {
-    padding: 60px 0;
-  }
-  @media screen and (max-width: 475px) {
-    padding: 30px 0;
-  }
+  /* @media screen and (max-width: 900px) {
+    margin-bottom: 300px;
+  } */
 `;
 
 export const InfoWrapper = styled.div`
-  display: grid;
-  z-index: 1;
-  height: 800px;
+  display: flex;
+  min-height: 800px;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
@@ -33,36 +27,31 @@ export const InfoWrapper = styled.div`
 `;
 
 export const InfoRow = styled.div`
-  display: grid;
-  grid-auto-columns: minmax(auto, 1fr);
+  display: flex;
   align-items: center;
-  grid-template-areas: ${({ imgStart }) =>
-    imgStart ? `"col2 col1"` : `"col1 col2"`};
 
-  @media screen and (max-width: 768px) {
-    grid-template-areas: ${({ imgStart }) =>
-      imgStart ? `"col1" "col2"` : `"col1 col1" "col2 col2"`};
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
   }
 `;
 export const SecondInfoRow = styled.div`
   /* padding-top: 20px; */
-  display: grid;
-  grid-auto-columns: minmax(auto, 1fr);
+  display: flex;
   align-items: center;
   gap: 50px;
-  grid-template-areas: ${({ imgStart }) =>
-    imgStart ? `"col1 col2"` : `"col1 col2"`};
 
-  @media screen and (max-width: 768px) {
-    grid-template-areas: ${({ imgStart }) =>
-      imgStart ? `"col1 col1" "col2 col2"` : `"col1" "col2"`};
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
   }
 `;
 
 export const Column1 = styled.div`
   margin-bottom: 15px;
   padding: 0 15px;
-  grid-area: col1;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 50px;
+  }
 `;
 export const SecondColumn1 = styled.div`
   margin-top: 0;
@@ -70,30 +59,35 @@ export const SecondColumn1 = styled.div`
   grid-area: col1;
 
   @media screen and (max-width: 768px) {
-    margin-top: 50px;
+    margin-top: 60px;
   }
 `;
 
 export const Column2 = styled.div`
   margin-bottom: 15px;
   padding: 0 15px;
-  grid-area: col2;
+  display: flex;
 `;
 export const SecondColumn2 = styled.div`
+  max-height: 600px;
+  height: 100%;
+  max-width: 450px;
+  width: 100%;
   border-radius: 20px;
-  /* background: #fff8dc; */
   background: #e4eefb;
-  /* border: 1px solid black; */
+  border: 1px solid black;
   box-shadow: rgb(38, 57, 77) 8px 20px 35px -5px;
   margin-bottom: 15px;
-  padding: 20px 10px 0 30px;
-  grid-area: col2;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 820px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 30px;
     padding: 25px 15px 0 17px;
   }
   @media screen and (max-width: 550px) {
@@ -104,11 +98,11 @@ export const SecondColumn2 = styled.div`
     padding: 20px 10px 0 13px;
   }
   @media screen and (max-width: 630px) {
-    padding: 20px 70px;
-    margin: 0 auto;
+    padding: 20px 20px;
+    margin: auto;
   }
   @media screen and (max-width: 500px) {
-    padding: 20px 30px;
+    padding: 20px 15px;
     margin: 0 auto;
   }
 `;
@@ -172,12 +166,12 @@ export const Subtitle = styled.div`
   font-weight: 500;
   line-height: 24px;
   color: #020202;
-  padding: 30px 10px 20px 10px;
+  padding: 0px 10px 0px 10px;
 
-  @media screen and (max-width: 630px) {
+  /* @media screen and (max-width: 630px) {
     padding-bottom: 0px;
     margin-bottom: 0px;
-  }
+  } */
   @media screen and (max-width: 480px) {
     font-size: 15px;
   }

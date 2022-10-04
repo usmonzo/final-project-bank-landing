@@ -18,6 +18,10 @@ export const Nav = styled.nav`
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
   }
+  @media screen and (max-width: 845px) {
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const NavbarContainer = styled.div`
@@ -36,6 +40,9 @@ export const NavLogo = styled(LinkRouter)`
   display: flex;
   align-items: center;
   margin-left: 24px;
+  @media screen and (max-width: 768px) {
+    margin-left: 0px;
+  }
 `;
 
 export const NavLogoImg = styled.img`
@@ -49,10 +56,10 @@ export const MobileIcon = styled.div`
   @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
-    top: 0;
+    top: 7px;
     right: 0;
     transform: translate(-100%, 60%);
-    font-size: 1.8rem;
+    font-size: 2rem;
     cursor: pointer;
     color: #fbfaf5;
   }

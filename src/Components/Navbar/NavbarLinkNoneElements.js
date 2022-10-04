@@ -36,6 +36,9 @@ export const NavLogo = styled(LinkRouter)`
   display: flex;
   align-items: center;
   margin-left: 24px;
+  @media screen and (max-width: 768px) {
+    margin-left: 0px;
+  }
 `;
 
 export const NavLogoImg = styled.img`
