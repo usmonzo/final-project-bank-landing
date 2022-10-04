@@ -1,0 +1,104 @@
+.sidebar {
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 25vw;
+  background-color: #101010;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.balance {
+  color: rgb(9, 212, 9);
+}
+.sidebarContent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.profileDetails {
+  margin-top: 2rem;
+}
+
+.profileImageDiv {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.profileAvatar {
+  width: 150px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+
+.notifications {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #dc3434;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 1px;
+  right: 50px;
+}
+.userNameEmail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.userName {
+  padding: 0 20px;
+  font-weight: 600;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userEmail {
+  padding: 0 20px;
+  opacity: 0.6;
+}
+
+.sidebarNav {
+  padding-top: 20px;
+  > ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0px auto;
+  }
+}
+
+.sidebarNavItem {
+  margin: 1rem 0;
+}
+
+.sidebarNavLink {
+  text-decoration: none;
+  outline: none;
+  color: white;
+  // opacity: 0.5;
+  font-size: 25px;
+  font-weight: 500;
+
+  &Active {
+    @extend .sidebarNavLink;
+    opacity: 1;
+  }
+}

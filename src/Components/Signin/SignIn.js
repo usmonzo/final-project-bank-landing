@@ -59,14 +59,6 @@ function SignIn({ Login, error }) {
               <FormButton type="submit" value="Войти" />
               <Text>Забыл пароль</Text>
             </Form>
-            {/* <form onSubmit={submitHandler}>
-              <h1>Войти в учетную запись :</h1>
-              <label htmlFor="name">Логин :</label>
-              <input type="text" name="username" id="username" />
-              <label htmlFor="password">Пароль :</label>
-              <input type="password" name="password" id="password" />
-              <input type="submit" value="submit" />
-            </form> */}
           </FormContent>
         </FormWrap>
       </Container>

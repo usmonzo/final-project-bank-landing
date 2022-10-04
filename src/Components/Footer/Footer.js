@@ -45,6 +45,13 @@ function Footer() {
               <FooterLink to="/">Агенство</FooterLink>
               <FooterLink to="/">Инфлюенсеры</FooterLink>
             </FooterLinkItems>
+            <FooterLinkItems>
+              <FooterLinkTitle>Свяжитесь с нами</FooterLinkTitle>
+              <FooterLink to="/">Контакты</FooterLink>
+              <FooterLink to="/">Помощь</FooterLink>
+              <FooterLink to="/">Адресс</FooterLink>
+              <FooterLink to="/">Спонсорство</FooterLink>
+            </FooterLinkItems>
           </FooterLinksWrapper>
         </FooterLinksContainer>
         <SocialMedia>

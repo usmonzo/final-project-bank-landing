@@ -8,4 +8,5 @@
 html {
   /* background-color: rgb(60, 60, 60); */
   background-color: #000;
+  overflow-x: hidden;
 }

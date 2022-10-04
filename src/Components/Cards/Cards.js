@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   ButtonBlack,
   ButtonRed,
-  ButtonsWrapper,
   Card,
   CardH3,
   CardH5,
@@ -26,23 +25,58 @@ import {
   HeadlineH1,
   CardsInfoWrapper,
   CardsInfoContainer,
+  Stackk,
+  Stackkk,
 } from "./CardsElements";
 import chip from "./images/chip.png";
 import visa from "./images/visa.png";
 import indicator from "./images/contactless-indicator.png";
 import logo from "../images/logo.svg";
-import { FormGroup, FormLabel } from "@mui/material";
+
+import { Button, Input, InputGroup, InputLeftAddon } from "@chakra-ui/react";
 
 function Cards() {
-  const [newName, setNewName] = useState("Ваши инициалы");
   const [cardStyle, setCardStyle] = useState("black");
+  const [data, setData] = useState({
+    color: "",
+    username: "",
+    date: "",
+    email: "",
+    tel: "",
+  });
+  const [details, setdDetails] = useState({
+    color: "",
 
-  const changeName = (event) => {
-    if (event.target.value === "") {
-      setNewName("Ваши инициалы");
+    username: "",
+    date: "",
+    email: "",
+    tel: "",
+  });
+
+  const Login = () => {
+    // console.log(details);
+
+    if (
+      details.username === data.username &&
+      details.date === data.date &&
+      details.email === data.email &&
+      details.tel === data.tel
+    ) {
+      console.log("Logged in !");
+      setData({
+        username: details.username,
+        date: details.date,
+        emeail: details.email,
+        tel: details.tel,
+      });
     } else {
-      setNewName(event.target.value);
+      console.log("...");
     }
+  };
+  const submitHandler = (e) => {
+    e.preventDefault();
+    console.log(details);
+    Login(details);
   };
 
   const changeToBlue = () => {
@@ -79,52 +113,101 @@ function Cards() {
   return (
     <CardsInfoContainer>
       <CardsInfoWrapper>
-        <HeadlineH1>Выберите как будет выглядеть именно ваша карта.</HeadlineH1>
         <InfoForm>
-          <ButtonsWrapper>
-            <Btns>
-              <ButtonBlack onClick={changeToBlack}></ButtonBlack>
-              <ButtonBlue onClick={changeToBlue}></ButtonBlue>
-              <ButtonGold onClick={changeToGold}></ButtonGold>
-              <ButtonDark onClick={changeToDark}></ButtonDark>
-              <ButtonBlueViolet onClick={changeToBlueViolet}></ButtonBlueViolet>
-              <ButtonLawngreen onClick={changeToLawgreen}></ButtonLawngreen>
-              <ButtonPurple onClick={changeToPurple}></ButtonPurple>
-              <ButtonRed onClick={changeToRed}></ButtonRed>
-              <ButtonGreen onClick={changeToGreen}></ButtonGreen>
-            </Btns>
-          </ButtonsWrapper>
-          <Color cardStyle={cardStyle}>
-            <Card>
-              <CardH3>
-                <CardLogo src={logo} />
-              </CardH3>
-              <CardiChip src={chip} alt="." />
-              <CardIndicator src={indicator} alt="." />
-              <CardNumber>1998 0922 2211 2211</CardNumber>
-              <CardH5>
-                <CardSpan>card holder</CardSpan>
-                <br />
-                {newName}
-              </CardH5>
-              <CardH6>
-                <CardSpan>expiry date</CardSpan>
-                <br />
-                22/27
-              </CardH6>
-              <CardVisa src={visa} alt="." />
-            </Card>
-          </Color>
-          <FormGroup sx={{ marginTop: "30px" }}>
-            <FormLabel>Введите ваше имя:</FormLabel>
-            <input
-              type="text"
-              onAnimationEnd={newName}
-              onChange={changeName}
-              placeholder={newName}
-              required
-            />
-          </FormGroup>
+          <HeadlineH1>
+            Выберите как будет выглядеть именно ваша карта.
+          </HeadlineH1>
+          <Stackk shadow="xl" spacing={5} direction="row">
+            <Color cardStyle={cardStyle}>
+              <Card>
+                <CardH3>
+                  <CardLogo src={logo} />
+                </CardH3>
+                <CardiChip src={chip} alt="." />
+                <CardIndicator src={indicator} alt="." />
+                <CardNumber>1998 0922 2211 2211</CardNumber>
+                <CardH5>
+                  <CardSpan>card holder</CardSpan>
+                  <br />
+                  {details.username !== "" ? details.username : "Имя Фамилия"}
+                </CardH5>
+                <CardH6>
+                  <CardSpan>expiry date</CardSpan>
+                  <br />
+                  22/27
+                </CardH6>
+                <CardVisa src={visa} alt="." />
+              </Card>
+            </Color>
+            <Stackkk onSubmit={submitHandler}>
+              <Btns>
+                <ButtonBlack onClick={changeToBlack}></ButtonBlack>
+                <ButtonBlue onClick={changeToBlue}></ButtonBlue>
+                <ButtonGold onClick={changeToGold}></ButtonGold>
+                <ButtonDark onClick={changeToDark}></ButtonDark>
+                <ButtonBlueViolet
+                  onClick={changeToBlueViolet}
+                ></ButtonBlueViolet>
+                <ButtonLawngreen onClick={changeToLawgreen}></ButtonLawngreen>
+                <ButtonPurple onClick={changeToPurple}></ButtonPurple>
+                <ButtonRed onClick={changeToRed}></ButtonRed>
+                <ButtonGreen onClick={changeToGreen}></ButtonGreen>
+              </Btns>
+
+              <Input
+                type="text"
+                onChange={(e) =>
+                  setdDetails({ ...details, username: e.target.value })
+                }
+                value={details.username}
+                placeholder="Имя Фамилия"
+                size="md"
+                variant="outline"
+                color="black"
+                sx={{ textTransform: "capitalize" }}
+                maxLength={20}
+                required
+              />
+              <Input
+                color="black"
+                type="date"
+                required
+                onChange={(e) =>
+                  setdDetails({ ...details, date: e.target.value })
+                }
+                value={details.date}
+              />
+              <Input
+                variant="outline"
+                placeholder="@email"
+                color="black"
+                onChange={(e) =>
+                  setdDetails({ ...details, email: e.target.value })
+                }
+                value={details.email}
+                required
+              />
+              <InputGroup>
+                <InputLeftAddon color="black" children="+992" />
+                <Input
+                  name="tel"
+                  type="tel"
+                  placeholder="номер телефона"
+                  maxLength={9}
+                  color="black"
+                  onChange={(e) =>
+                    setdDetails({ ...details, tel: e.target.value })
+                  }
+                  value={details.tel}
+                  required
+                />
+              </InputGroup>
+              <Button type="submit" colorScheme="blue">
+                Оставить заявку
+              </Button>
+            </Stackkk>
+            <h1>hello</h1>
+          </Stackk>
         </InfoForm>
       </CardsInfoWrapper>
     </CardsInfoContainer>

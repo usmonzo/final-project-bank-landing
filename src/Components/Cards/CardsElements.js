@@ -1,20 +1,10 @@
 import styled from "styled-components";
 
-export const Page = styled.div`
-  height: 800px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #f2f3f4;
-  border: 1px solid #030303;
-  margin: 0px auto 10px auto;
-`;
 export const ContentWrapper = styled.div`
   background: #fff;
   /* height: 900px; */
   max-width: 1400px;
-  border: 2px solid red;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,14 +12,8 @@ export const ContentWrapper = styled.div`
   /* margin: 20px auto 10px auto; */
 `;
 export const CardTitle = styled.h1`
-  border: 2px solid red;
   font-size: 40px;
   font-weight: 400;
-  padding: 20px;
-`;
-
-export const Content = styled.div`
-  border: 2px solid black;
   padding: 20px;
 `;
 
@@ -43,7 +27,7 @@ export const Content = styled.div`
 export const ButtonsWrapper = styled.div`
   background: #f2f3f4;
   max-width: 400px;
-  /* border: 2px solid black; */
+
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -53,7 +37,7 @@ export const ButtonsWrapper = styled.div`
 `;
 
 export const Btns = styled.div`
-  padding: 20px;
+  padding: 5px 20px;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: 1fr;
@@ -61,7 +45,7 @@ export const Btns = styled.div`
 `;
 
 export const ButtonBlack = styled.button`
-  border-radius: 1px;
+  border-radius: 5px;
   background: #010203;
   white-space: nowrap;
   width: 20px;
@@ -75,7 +59,7 @@ export const ButtonBlack = styled.button`
 `;
 
 export const ButtonRed = styled.button`
-  border-radius: 1px;
+  border-radius: 5px;
   background: red;
   white-space: nowrap;
   width: 20px;
@@ -88,7 +72,7 @@ export const ButtonRed = styled.button`
   transition: all 0.2s ease-in-out;
 `;
 export const ButtonBlue = styled.button`
-  border-radius: 1px;
+  border-radius: 5px;
   background: blue;
   white-space: nowrap;
   width: 20px;
@@ -99,7 +83,7 @@ export const ButtonBlue = styled.button`
   transition: all 0.2s ease-in-out;
 `;
 export const ButtonPurple = styled.button`
-  border-radius: 1px;
+  border-radius: 5px;
   background: purple;
   white-space: nowrap;
   width: 20px;
@@ -110,7 +94,7 @@ export const ButtonPurple = styled.button`
   transition: all 0.2s ease-in-out;
 `;
 export const ButtonPink = styled.button`
-  border-radius: 1px;
+  border-radius: 5px;
   background: pink;
   white-space: nowrap;
   width: 20px;
@@ -121,7 +105,7 @@ export const ButtonPink = styled.button`
   transition: all 0.2s ease-in-out;
 `;
 export const ButtonGold = styled.button`
-  border-radius: 1px;
+  border-radius: 5px;
   background: gold;
   white-space: nowrap;
   width: 20px;
@@ -132,7 +116,7 @@ export const ButtonGold = styled.button`
   transition: all 0.2s ease-in-out;
 `;
 export const ButtonDark = styled.button`
-  border-radius: 1px;
+  border-radius: 5px;
   background: darkgoldenrod;
   white-space: nowrap;
   width: 20px;
@@ -143,36 +127,31 @@ export const ButtonDark = styled.button`
   transition: all 0.2s ease-in-out;
 `;
 export const ButtonBlueViolet = styled.button`
-  border-radius: 1px;
+  border-radius: 5px;
   background: blueviolet;
   white-space: nowrap;
   width: 20px;
   height: 20px;
-  outline: none;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 `;
 export const ButtonLawngreen = styled.button`
-  border-radius: 1px;
+  border-radius: 5px;
   background: lawngreen;
   white-space: nowrap;
   width: 20px;
   height: 20px;
-  outline: none;
-  border: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 `;
 
 export const ButtonGreen = styled.button`
-  border-radius: 1px;
+  border-radius: 5px;
   background: green;
   white-space: nowrap;
   width: 20px;
   height: 20px;
-  outline: none;
-  border: none;
   cursor: pointer;
   justify-content: center;
   align-items: center;
@@ -190,7 +169,8 @@ export const Color = styled.div`
   background-color: ${(props) => props.cardStyle};
   max-width: 505px;
   max-height: 320px;
-  border-radius: 29px;
+  border: none;
+  border-radius: 31px;
   margin: 10px auto 10px auto;
 `;
 
@@ -218,7 +198,7 @@ export const CardH3 = styled.div`
   right: 30px;
 `;
 export const CardLogo = styled.img`
-  width: 40px;
+  width: 43px;
 `;
 
 export const CardiChip = styled.img`
@@ -286,11 +266,10 @@ export const CardVisa = styled.img`
 //                     //
 //                     //
 export const CardsInfoContainer = styled.div`
-  /* border-bottom: 1px solid black; */
   color: #fbfaf5;
   background: #f2f3f4;
   transition: 0.2s all ease-in-out;
-  padding-top: 40px;
+  padding: 50px 0;
 
   @media screen and (max-width: 768px) {
     padding: 170px 0;
@@ -298,18 +277,25 @@ export const CardsInfoContainer = styled.div`
 `;
 
 export const InfoForm = styled.div`
-  border: 2px solid red;
+  padding: 50px;
+  margin: 50px;
+  border-radius: 15px;
+
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   display: flex;
   align-items: center;
   flex-direction: column;
+  position: relative;
 
   @media screen and (max-width: 768px) {
+    margin-top: 200px;
   }
 `;
 export const CardsInfoWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 800px;
+  max-height: 1300px;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
@@ -319,7 +305,7 @@ export const CardsInfoWrapper = styled.div`
 `;
 
 export const HeadlineH1 = styled.h1`
-  margin-top: 30px;
+  margin-top: 10px;
   justify-self: center;
   border-radius: 20px;
   padding: 30px 10px 20px 10px;
@@ -331,8 +317,42 @@ export const HeadlineH1 = styled.h1`
   margin-bottom: 50px;
   /* margin-top: 0; */
 
-  @media screen and (max-width: 480px) {
-    font-size: 2rem;
+  @media screen and (max-width: 768px) {
+    font-size: 2.2rem;
     text-align: center;
+    margin-bottom: 30px;
+  }
+`;
+//                     //
+//                     //
+//                     //
+//        BOX          //
+//                     //
+//                     //
+//                     //
+
+export const Stackk = styled.div`
+  display: flex;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+  }
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+  }
+`;
+export const Stackkk = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  margin-left: 40px;
+  @media screen and (max-width: 768px) {
+    padding-top: 20px;
+    margin-left: 0;
   }
 `;

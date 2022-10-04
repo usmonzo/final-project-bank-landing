@@ -77,7 +77,7 @@ export const SecondColumn2 = styled.div`
   /* border: 1px solid black; */
   box-shadow: rgb(38, 57, 77) 8px 20px 35px -5px;
   margin-bottom: 15px;
-  padding: 20px 15px 0 15px;
+  padding: 20px 10px 0 30px;
   grid-area: col2;
 
   @media screen and (max-width: 768px) {
@@ -141,8 +141,7 @@ export const Heading = styled.h1`
   }
 `;
 
-export const Subtitle = styled.p`
-  /* border-bottom: 1px solid red; */
+export const Subtitle = styled.div`
   max-width: 400px;
   margin-bottom: 35px;
   font-size: 20px;

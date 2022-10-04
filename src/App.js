@@ -6,6 +6,7 @@ import SignInPage from "./Components/pages/SignInPage";
 import CardsPage from "./Components/pages/CardsPage";
 
 import Cards from "./Components/Cards/Cards";
+import UserPage from "./Components/UserPage/UserPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/card" element={<CardsPage />} />
         <Route path="/cards" element={<Cards />} />
+        <Route path="/user" element={<UserPage />} />
       </Routes>
     </BrowserRouter>
   );

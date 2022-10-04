@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SignIn from "../Signin/SignIn";
+import UserPage from "../UserPage/UserPage";
 
 function SignInPage() {
   const appUser = {
@@ -31,11 +32,8 @@ function SignInPage() {
   };
   return (
     <>
-      {user.username != "" ? (
-        <>
-          <h1 style={{ color: "#fff" }}>welcome {user.username}</h1>
-          <button onClick={Logout}> heeeeee</button>
-        </>
+      {user.username !== "" ? (
+        <UserPage Logout={Logout} />
       ) : (
         <SignIn Login={Login} error={error} />
       )}

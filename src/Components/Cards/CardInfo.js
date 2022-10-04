@@ -68,26 +68,26 @@ const CardsInfoSection = () => {
             </SecondColumn1>
             <SecondColumn2>
               <Subtitle style={{ paddingTop: "10px" }}>
-                <BsCashStack style={{ width: "30px", padding: "0" }} /> Снятие
-                наличных из любой точки мира без{" "}
+                <BsCashStack size="2em" />
+                Снятие наличных из любой точки мира без{" "}
                 <span style={{ color: "#2673e2" }}>%</span>.
               </Subtitle>
               <Subtitle>
-                <BiTransfer style={{ width: "30px", padding: "0" }} /> Самые
-                быстрые переводы с карты на карту, не теряй ни секунды.
+                <BiTransfer size="2em" /> Самые быстрые переводы с карты на
+                карту, не теряй ни секунды.
               </Subtitle>
               <Subtitle>
-                <BsCurrencyExchange style={{ width: "30px", padding: "0" }} />
+                <BsCurrencyExchange size="2em" />
                 <span style={{ color: "#2673e2" }}>Мультивалютность:</span>{" "}
                 храните деньги в любой выбранной вами валюте.
               </Subtitle>
               <Subtitle>
-                <TbCashOff style={{ width: "30px", padding: "0" }} />
+                <TbCashOff size="2em" />
                 Оформление, первый год обслуживания и доставка в любую точку
                 мира – абсолютно бесплатно.
               </Subtitle>
               <Subtitle>
-                <BsCashCoin style={{ width: "30px", padding: "0" }} />
+                <BsCashCoin size="2em" />
                 Повышенный кешбэк, по{" "}
                 <span
                   style={{
