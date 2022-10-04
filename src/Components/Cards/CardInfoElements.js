@@ -9,6 +9,15 @@ export const InfoContainer = styled.div`
   @media screen and (max-width: 768px) {
     padding: 130px 0;
   }
+  @media screen and (max-width: 601px) {
+    padding: 100px 0;
+  }
+  @media screen and (max-width: 501px) {
+    padding: 60px 0;
+  }
+  @media screen and (max-width: 475px) {
+    padding: 30px 0;
+  }
 `;
 
 export const InfoWrapper = styled.div`
@@ -87,6 +96,21 @@ export const SecondColumn2 = styled.div`
     align-items: center;
     padding: 25px 15px 0 17px;
   }
+  @media screen and (max-width: 550px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px 0 13px;
+  }
+  @media screen and (max-width: 630px) {
+    padding: 20px 70px;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 500px) {
+    padding: 20px 30px;
+    margin: 0 auto;
+  }
 `;
 
 export const TextWrapper = styled.div`
@@ -148,6 +172,15 @@ export const Subtitle = styled.div`
   font-weight: 500;
   line-height: 24px;
   color: #020202;
+  padding: 30px 10px 20px 10px;
+
+  @media screen and (max-width: 630px) {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 15px;
+  }
 `;
 export const FirstSubtitle = styled.p`
   max-width: 400px;
@@ -180,4 +213,14 @@ export const Img = styled.img`
   margin-top: 20px;
   border-radius: 40px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  @media screen and (max-width: 600px) {
+    border-radius: 30px;
+  }
+  @media screen and (max-width: 500px) {
+    border-radius: 25px;
+    margin-top: 10px;
+  }
+  @media screen and (max-width: 400px) {
+    border-radius: 20px;
+  }
 `;

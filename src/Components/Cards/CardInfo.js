@@ -102,9 +102,10 @@ const CardsInfoSection = () => {
               </Subtitle>
               <Subtitle
                 style={{
+                  marginBottom: "30px",
                   textAlign: "center",
                   fontSize: "24px",
-                  borderBottom: "1px solid red",
+                  borderBottom: "2px solid red",
                   borderRadius: "2px",
                 }}
               >

@@ -103,7 +103,7 @@ function Cards() {
   };
 
   const changeToLawgreen = () => {
-    setCardStyle("lawngreen");
+    setCardStyle("darksalmon");
   };
 
   const changeToPurple = () => {
@@ -202,11 +202,10 @@ function Cards() {
                   required
                 />
               </InputGroup>
-              <Button type="submit" colorScheme="blue">
+              <Button type="submit" colorScheme="blue" sx={{ padding: "7px" }}>
                 Оставить заявку
               </Button>
             </Stackkk>
-            <h1>hello</h1>
           </Stackk>
         </InfoForm>
       </CardsInfoWrapper>

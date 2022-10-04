@@ -129,13 +129,13 @@ export default function Expenses() {
     },
     {
       name: "Page F",
-      uv: 2390,
+      uv: 3390,
       pv: 3800,
       amt: 2500,
     },
     {
       name: "Page G",
-      uv: 3490,
+      uv: 390,
       pv: 4300,
       amt: 2100,
     },
