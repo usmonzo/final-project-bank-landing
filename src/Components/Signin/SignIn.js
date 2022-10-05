@@ -28,11 +28,11 @@ function SignIn({ Login }) {
     <>
       <Container>
         <FormWrap>
-          <Icon to="/">
-            <IconLogo src={logo} alt="logo" />
-          </Icon>
           <FormContent>
             <Form onSubmit={submitHandler}>
+              <Icon to="/">
+                <IconLogo src={logo} alt="logo" />
+              </Icon>
               <FormH1>Войти в учетную запись :</FormH1>
               <FormLabel htmlFor="for">Логин </FormLabel>
               <FormInput

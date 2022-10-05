@@ -215,7 +215,6 @@ export const Color = styled.div`
 export const Card = styled.div`
   width: 506px;
   height: 319px;
-  /* position: relative; */
   background: radial-gradient(
     140% 140% at 0% 0%,
     rgba(255, 255, 255, 0.4) 0%,

@@ -26,21 +26,20 @@ export const FormWrap = styled.div`
 `;
 
 export const Icon = styled(Link)`
-  margin-left: 32px;
-  margin-top: 32px;
-  /* text-decoration: none; */
-  /* color: #fff; */
-  /* font-weight: 700; */
-  /* font-size: 32px; */
-  max-width: 100px;
-  @media screen and (max-width: 480px) {
-    margin-left: 16px;
-    margin-top: 8px;
-  }
+  /* margin-left: 32px;
+  margin-top: 32px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const IconLogo = styled.img`
   width: 50px;
+  padding-bottom: 30px;
+  /* @media screen and (max-width: 750px) {
+    display: none;
+  } */
 `;
 
 export const FormContent = styled.div`
@@ -50,7 +49,7 @@ export const FormContent = styled.div`
   justify-content: center;
   /* align-items: center; */
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 500px) {
     padding: 10px;
   }
 `;
@@ -70,19 +69,19 @@ export const Form = styled.form`
   display: grid;
   /* grid-template-columns: 1fr; */
   margin: 0 auto;
-  padding: 80px 32px;
+  padding: 50px 32px;
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
 
   @media screen and (max-width: 400px) {
-    padding: 32px 32px;
+    margin-top: 140px;
   }
 `;
 
 export const FormH1 = styled.h1`
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   color: #fff;
-  font-size: 23px;
+  font-size: 25px;
   font-weight: 400;
   text-align: center;
 `;

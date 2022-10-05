@@ -1,0 +1,11 @@
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.all {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

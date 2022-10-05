@@ -1,6 +1,5 @@
 import styles from "./Expenses.module.scss";
 
-import addIcon from "../assets/png/addIcon.png";
 import { BarChart, Bar, ResponsiveContainer, Cell } from "recharts";
 import React, { useState } from "react";
 import optionIcon from "../assets/png/menuIcon.png";
@@ -9,8 +8,8 @@ import transportIcon from "../assets/svg/transportIcon.svg";
 import houseIcon from "../assets/svg/houseIcon.svg";
 import boxes from "../assets/png/boxes.png";
 import plant from "../assets/png/plant.png";
-
-export default function Expenses() {
+import usmonzo from "../Sidebar/usmonzo.jpeg";
+export default function Expenses({ Logout }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const data = [
     {
@@ -225,39 +224,63 @@ export default function Expenses() {
     <>
       <main className={styles.expenses}>
         <div className={styles.expensesCard}>
-          <section className={styles.expensesOverview}>
-            <div className={styles.expensesHeader}>
-              <p className={styles.expensesTitle}>Расходы</p>
-              <div className={styles.expensesActions}>
-                <div className={styles.personImages}></div>
-                <button>
-                  <img className={styles.addIcon} src={addIcon} alt="add" />
+          <div className={styles.profileDetails}>
+            <div className={styles.profileImageDiv}>
+              <img className={styles.profileAvatar} src={usmonzo} alt="." />
+              <p className={styles.notifications}>4</p>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <h2 className={styles.balanceH2}>Баланс:</h2>
+                <span className={styles.balance}>8 996 $</span>
+              </div>
+              <div className={styles.userNameEmail}>
+                <p className={styles.userName}>Усмон Тураев</p>
+                <p className={styles.userEmail}>
+                  usmonzo@<span className={styles.gmailCom}>gmail.com</span>
+                </p>
+                <button
+                  color="blue"
+                  className={styles.buttonn}
+                  onClick={Logout}
+                >
+                  Выйти
                 </button>
               </div>
             </div>
+          </div>
+          <section className={styles.expensesOverview}>
+            <div className={styles.expensesHeader}>
+              <p className={styles.expensesTitle}>Расходы</p>
 
-            <p className={styles.dateRange}>01 Ст. - 01 Октября , 2022</p>
-            <ResponsiveContainer width="100%" height="9%">
-              <BarChart data={data}>
-                <Bar
-                  dataKey="uv"
-                  fill="rgba(21, 122, 255, .2)"
-                  onMouseOver={onMouseOver}
-                >
-                  {data.map((entry, index) => (
-                    <Cell
-                      cursor="pointer"
-                      fill={
-                        index === activeIndex
-                          ? "rgb(21, 122, 255)"
-                          : "rgba(21, 122, 255, .2)"
-                      }
-                      key={index}
-                    />
-                  ))}
-                </Bar>
-              </BarChart>
-            </ResponsiveContainer>
+              <p className={styles.dateRange}>01 Ст. - 01 Октября , 2022</p>
+              <ResponsiveContainer width="100%" height="10%">
+                <BarChart data={data}>
+                  <Bar
+                    dataKey="uv"
+                    fill="rgba(21, 122, 255, .2)"
+                    onMouseOver={onMouseOver}
+                  >
+                    {data.map((entry, index) => (
+                      <Cell
+                        cursor="pointer"
+                        fill={
+                          index === activeIndex
+                            ? "rgb(21, 122, 255)"
+                            : "rgba(21, 122, 255, .2)"
+                        }
+                        key={index}
+                      />
+                    ))}
+                  </Bar>
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
 
             <div className={styles.expensesOverviewHeader}>
               <p className={styles.expensesOverviewTitle}>Сегодня</p>

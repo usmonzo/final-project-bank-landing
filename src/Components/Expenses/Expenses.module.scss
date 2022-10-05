@@ -1,35 +1,144 @@
-.expenses {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 75vw;
-  background-color: #101010;
+.profileDetails {
+  margin-top: 2rem;
+  padding: 20px 0;
+  border-radius: 20px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  @media screen and (max-width: 960px) {
+    grid-row: 1;
+  }
+}
+
+.profileImageDiv {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.profileAvatar {
+  max-width: 150px;
+  width: 100%;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+
+.notifications {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #dc3434;
 
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 5px;
+  right: 120px;
+}
+.userNameEmail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.userName {
+  padding: 0 20px;
+  font-weight: 600;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userEmail {
+  padding: 0 20px;
+  opacity: 0.6;
+  font-size: 20px;
+}
+
+.balanceH2 {
+  font-size: 20px;
+}
+.balance {
+  padding-left: 10px;
+  color: rgb(9, 212, 9);
+}
+
+// ═════════════════════███
+// ═══════════════════█████
+// ══════════════════██████
+// ════════════════███████
+// ═══════════════████████
+// ═══════════════████████
+// ══════════════██████████
+// ══════════════██████████
+// ══════════════███████████══════════════███
+// ══════════════████████████═══════════████
+// ═══════█══════█████████████════════██████
+// ═══════████════█████████████══════███████
+// ═══════█████═══██████████████════████████
+// ═══════██████═══███████████████══████████
+// ═══════███████══██████████████████████████
+// ═══════███████══██████████████████████████
+// ══════████████══███████████████████████████
+// ═════█████████═██████████══█████████████████
+// ═══██████████████████████═══█████████████████
+// ══███████████████████████═══██████████████████
+// ══███████████████████████════█████████████████
+// ═████████████████═██████════███████████████████
+// ═████████████████══███══════███═███████████████
+// ═███████████████═══█════════██══███████████████
+// ═██████████████═════════════██══██████████████
+// ═██████████████══════════════█════███████████
+// ══████████████═════════════════════█████████
+// ════██████████═════════════════════████████
+// ══════████████═════════════════════██████
+// ═════════██████═══════════════════████
+// ═════════════█████══════════════████
+
+.expenses {
+  max-width: 1200px;
+  padding: 0;
+  margin: 0 auto;
 }
 
 .expensesCard {
   background-color: white;
-  width: 95%;
-  height: 95%;
   border-radius: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  align-items: center;
 
-  display: flex;
+  padding: 15px 40px;
+  margin: 0 auto;
+  @media screen and (max-width: 1205px) {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+  }
+  @media screen and (max-width: 960px) {
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(3, auto);
+  }
 }
 
 .expensesOverview {
-  width: 65%;
-  padding: 5rem;
-
-  overflow-y: scroll;
+  padding: 1rem;
+  @media screen and (max-width: 960px) {
+    grid-row: 2;
+  }
 }
 
 .expensesHeader {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  @media screen and (max-width: 740px) {
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .expensesTitle {
@@ -41,24 +150,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.personOne {
-  position: relative;
-  left: -73%;
-  z-index: 3;
-}
-
-.personTwo {
-  position: relative;
-  left: -83%;
-  z-index: 2;
-}
-
-.personThree {
-  position: relative;
-  left: -93%;
-  z-index: 1;
 }
 
 .addIcon {
@@ -129,11 +220,20 @@
 }
 
 .moneyOverview {
-  width: 35%;
+  max-width: 400px;
   background-color: #f9fafc;
-  border-radius: 0 50px 50px 0;
-  padding: 5rem 2rem;
+  border-radius: 30px;
+  padding: 20px 10px;
   overflow-y: scroll;
+  @media screen and (max-width: 1205px) {
+    grid-column: 2;
+    max-width: 600px;
+    justify-self: center;
+  }
+  @media screen and (max-width: 960px) {
+    grid-row: 3;
+    grid-column: 1;
+  }
 }
 
 .spendCategory {
@@ -152,8 +252,6 @@
 }
 
 .spendCategoryBar {
-  height: 5px;
-  width: 100%;
   background-color: #eceff5;
   position: relative;
   border-radius: 5px;
@@ -163,20 +261,22 @@
 
 .spendCategoryColoredBar {
   height: 5px;
-  background-color: #31ba96;
+  background-color: #2673e2;
   position: absolute;
   border-radius: 5px;
 }
 
 .saveMoneyDiv {
-  width: 70%;
   margin: 0 auto;
   background-color: #edf0f6;
   margin-top: 4rem;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 15px;
 
   position: relative;
+  // @media screen and (max-width: 1005px) {
+  //   display: none;
+  // }
 }
 
 .boxes {
@@ -205,15 +305,31 @@
 
 .button {
   cursor: pointer;
+  font-size: 13px;
   background-color: #101010;
   border-radius: 8px;
   color: white;
-  font-weight: 600;
-  line-height: 19px;
-  letter-spacing: 1.5px;
-  padding: 1rem 3rem;
+  font-weight: 500;
+  // letter-spacing: 1.5px;
+  padding: 10px 20px;
   margin-top: 1.5rem;
-  width: 50%;
+
+  display: flex;
+  justify-content: center;
+}
+.buttonn {
+  @media screen and (min-width: 421px) {
+    display: none;
+  }
+  cursor: pointer;
+  font-size: 13px;
+  background-color: #101010;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  // letter-spacing: 1.5px;
+  padding: 10px 20px;
+  margin-top: 1.5rem;
 
   display: flex;
   justify-content: center;
