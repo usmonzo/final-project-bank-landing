@@ -160,7 +160,7 @@ export default function Expenses({ Logout }) {
     },
     {
       id: 3,
-      expense: "Супермаркет",
+      expense: "Продукты",
       time: "12:12",
       location: "Пайкар",
       price: 185.75,
@@ -173,7 +173,7 @@ export default function Expenses({ Logout }) {
       id: 1,
       expense: "KFC",
       time: "10:12",
-      location: "Еда и напитки",
+      location: "Еда ",
       price: 156.0,
       icon: cartIcon,
       iconBackgroundColor: "#DC3434",
@@ -259,22 +259,37 @@ export default function Expenses({ Logout }) {
               <p className={styles.expensesTitle}>Расходы</p>
 
               <p className={styles.dateRange}>01 Ст. - 01 Октября , 2022</p>
-              <ResponsiveContainer width="100%" height="10%">
-                <BarChart data={data}>
-                  <Bar
-                    dataKey="uv"
-                    fill="rgba(21, 122, 255, .2)"
-                    onMouseOver={onMouseOver}
-                  >
+            </div>
+            {/* <ResponsiveContainer width="100%" height="10%">
+              <BarChart data={data}>
+                <Bar
+                  dataKey="uv"
+                  fill="rgba(21, 122, 255, .2)"
+                  onMouseOver={onMouseOver}
+                >
+                  {data.map((entry, index) => (
+                    <Cell
+                      cursor="pointer"
+                      fill={
+                        index === activeIndex
+                          ? "rgb(21, 122, 255)"
+                          : "rgba(21, 122, 255, .2)"
+                      }
+                      key={index}
+                    />
+                  ))}
+                </Bar>
+              </BarChart>
+            </ResponsiveContainer> */}
+            <div className={styles.graph}>
+              <ResponsiveContainer width="100%" height={100}>
+                <BarChart width={150} height={40} data={data}>
+                  <Bar dataKey="uv" onMouseOver={onMouseOver}>
                     {data.map((entry, index) => (
                       <Cell
                         cursor="pointer"
-                        fill={
-                          index === activeIndex
-                            ? "rgb(21, 122, 255)"
-                            : "rgba(21, 122, 255, .2)"
-                        }
-                        key={index}
+                        fill={index === activeIndex ? "#2673e2" : "#019f29"}
+                        key={`cell-${index}`}
                       />
                     ))}
                   </Bar>

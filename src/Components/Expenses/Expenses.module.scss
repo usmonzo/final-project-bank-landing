@@ -1,5 +1,6 @@
 .profileDetails {
   margin-top: 2rem;
+  margin-bottom: 20px;
   padding: 20px 0;
   border-radius: 20px;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
@@ -29,7 +30,7 @@
   border-radius: 50%;
   background-color: #dc3434;
 
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 
@@ -50,16 +51,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 341px) {
+    font-size: 23px;
+  }
 }
 
 .userEmail {
   padding: 0 20px;
   opacity: 0.6;
   font-size: 20px;
+  @media screen and (max-width: 341px) {
+    font-size: 17px;
+  }
 }
 
 .balanceH2 {
   font-size: 20px;
+  @media screen and (max-width: 341px) {
+    font-size: 16px;
+  }
 }
 .balance {
   padding-left: 10px;
@@ -104,11 +114,29 @@
   margin: 0 auto;
 }
 
+.graph {
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  @media screen and (max-width: 591px) {
+    width: 95%;
+  }
+  @media screen and (max-width: 581px) {
+    width: 95%;
+    padding-left: 30px;
+    padding-rigth: 0px;
+  }
+  @media screen and (max-width: 401px) {
+    display: none;
+  }
+}
+
 .expensesCard {
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 30px;
   display: grid;
   grid-template-columns: repeat(3, auto);
+
   justify-content: center;
   align-items: center;
 
@@ -122,12 +150,21 @@
     grid-template-columns: repeat(1, auto);
     grid-template-rows: repeat(3, auto);
   }
+  @media screen and (max-width: 420px) {
+    height: 100%;
+    border-radius: 0;
+  }
 }
 
 .expensesOverview {
   padding: 1rem;
   @media screen and (max-width: 960px) {
     grid-row: 2;
+  }
+
+  @media screen and (max-width: 401px) {
+    padding: 0;
+    font-size: 14px;
   }
 }
 
@@ -142,8 +179,12 @@
 }
 
 .expensesTitle {
+  padding-top: 20px;
   font-weight: 600;
   font-size: 40px;
+  @media screen and (max-width: 401px) {
+    font-size: 34px;
+  }
 }
 
 .expensesActions {
@@ -160,6 +201,9 @@
   margin-top: 1rem;
   opacity: 0.5;
   margin-bottom: 2rem;
+  @media screen and (max-width: 401px) {
+    display: none;
+  }
 }
 
 .expensesOverviewHeader {
@@ -201,9 +245,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 380px) {
+    width: 40px;
+    height: 40px;
+  }
+  @media screen and (max-width: 350px) {
+    width: 35px;
+    height: 35px;
+  }
+  @media screen and (max-width: 331px) {
+    width: 30px;
+    height: 30px;
+  }
+  @media screen and (max-width: 319px) {
+    display: none;
+  }
 }
 .expenseItemDetails {
   margin-left: 1rem;
+  @media screen and (max-width: 319px) {
+    margin-left: 0;
+  }
 }
 
 .expenseItemTitle {
