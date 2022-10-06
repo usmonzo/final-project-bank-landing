@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 import {
   ButtonBlack,
   ButtonRed,
@@ -34,6 +35,9 @@ import indicator from "./images/contactless-indicator.png";
 import logo from "../images/logo.svg";
 
 import { Button, Input, InputGroup, InputLeftAddon } from "@chakra-ui/react";
+
+const notify = () =>
+  toast.success("Ваша заявка принята и в cкором времени будет рассмотрена.");
 
 function Cards() {
   const [cardStyle, setCardStyle] = useState("black");
@@ -77,6 +81,7 @@ function Cards() {
     e.preventDefault();
     console.log(details);
     Login(details);
+    notify();
   };
 
   const changeToBlue = () => {
@@ -178,6 +183,7 @@ function Cards() {
                 value={details.date}
               />
               <Input
+                type="email"
                 variant="outline"
                 placeholder="@email"
                 color="black"
@@ -191,7 +197,7 @@ function Cards() {
                 <InputLeftAddon color="black" children="+992" />
                 <Input
                   name="tel"
-                  type="tel"
+                  type="number"
                   placeholder="номер телефона"
                   maxLength={9}
                   color="black"
@@ -202,13 +208,20 @@ function Cards() {
                   required
                 />
               </InputGroup>
-              <Button type="submit" colorScheme="blue" sx={{ padding: "7px" }}>
+
+              <Button
+                type="submit"
+                colorScheme="blue"
+                sx={{ padding: "7px" }}
+                onDragEnter
+              >
                 Оставить заявку
               </Button>
             </Stackkk>
           </Stackk>
         </InfoForm>
       </CardsInfoWrapper>
+      <Toaster />
     </CardsInfoContainer>
   );
 }
