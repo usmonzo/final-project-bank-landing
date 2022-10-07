@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Expenses from "../Expenses/Expenses";
 // import image from "../images/logo.svg";
-import Sidebar from "../Sidebar/Sidebar";
+// import Sidebar from "../Sidebar/Sidebar";
 import "./UserPage.scss";
 
 export const Container = styled.div`
@@ -19,7 +19,7 @@ export const Container = styled.div`
 function UserPage({ Logout }) {
   return (
     <Container>
-      <Sidebar Logout={Logout} />
+      {/* <Sidebar Logout={Logout} /> */}
       <Expenses Logout={Logout} />
     </Container>
   );

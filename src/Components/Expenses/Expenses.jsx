@@ -9,6 +9,14 @@ import houseIcon from "../assets/svg/houseIcon.svg";
 import boxes from "../assets/png/boxes.png";
 import plant from "../assets/png/plant.png";
 import usmonzo from "../Sidebar/usmonzo.jpeg";
+import {
+  Stat,
+  StatArrow,
+  StatGroup,
+  StatHelpText,
+  StatLabel,
+  StatNumber,
+} from "@chakra-ui/react";
 export default function Expenses({ Logout }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const data = [
@@ -226,24 +234,14 @@ export default function Expenses({ Logout }) {
         <div className={styles.expensesCard}>
           <div className={styles.profileDetails}>
             <div className={styles.profileImageDiv}>
-              <img className={styles.profileAvatar} src={usmonzo} alt="." />
-              <p className={styles.notifications}>4</p>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <h2 className={styles.balanceH2}>Баланс:</h2>
-                <span className={styles.balance}>8 996 $</span>
-              </div>
               <div className={styles.userNameEmail}>
-                <p className={styles.userName}>Усмон Тураев</p>
-                <p className={styles.userEmail}>
-                  usmonzo@<span className={styles.gmailCom}>gmail.com</span>
-                </p>
+                <img className={styles.profileAvatar} src={usmonzo} alt="." />
+                <div>
+                  <p className={styles.userName}>Усмон Тураев</p>
+                  <p className={styles.userEmail}>
+                    usmonzo@<span className={styles.gmailCom}>gmail.com</span>
+                  </p>
+                </div>
                 <button
                   color="blue"
                   className={styles.buttonn}
@@ -252,35 +250,51 @@ export default function Expenses({ Logout }) {
                   Выйти
                 </button>
               </div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    margin: "20px 0 10px 0",
+                  }}
+                >
+                  <h2 className={styles.balanceH2}>Баланс:</h2>
+                  <span className={styles.balance}>8 996 $</span>
+                </div>
+                <StatGroup>
+                  <Stat marginRight={10}>
+                    <StatLabel>Доходы</StatLabel>
+                    <StatNumber>4,670$</StatNumber>
+                    <StatHelpText>
+                      <StatArrow type="increase" />
+                      23.36%
+                    </StatHelpText>
+                  </Stat>
+                  <Stat>
+                    <StatLabel>Расходы</StatLabel>
+                    <StatNumber>450$</StatNumber>
+                    <StatHelpText>
+                      <StatArrow type="decrease" />
+                      9.05%
+                    </StatHelpText>
+                  </Stat>
+                </StatGroup>
+              </div>
             </div>
           </div>
           <section className={styles.expensesOverview}>
             <div className={styles.expensesHeader}>
               <p className={styles.expensesTitle}>Расходы</p>
-
               <p className={styles.dateRange}>01 Ст. - 01 Октября , 2022</p>
             </div>
-            {/* <ResponsiveContainer width="100%" height="10%">
-              <BarChart data={data}>
-                <Bar
-                  dataKey="uv"
-                  fill="rgba(21, 122, 255, .2)"
-                  onMouseOver={onMouseOver}
-                >
-                  {data.map((entry, index) => (
-                    <Cell
-                      cursor="pointer"
-                      fill={
-                        index === activeIndex
-                          ? "rgb(21, 122, 255)"
-                          : "rgba(21, 122, 255, .2)"
-                      }
-                      key={index}
-                    />
-                  ))}
-                </Bar>
-              </BarChart>
-            </ResponsiveContainer> */}
             <div className={styles.graph}>
               <ResponsiveContainer width="100%" height={100}>
                 <BarChart width={150} height={40} data={data}>

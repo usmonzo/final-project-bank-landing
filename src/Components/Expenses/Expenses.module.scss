@@ -3,10 +3,12 @@
   margin-bottom: 20px;
   padding: 20px 0;
   border-radius: 20px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   @media screen and (max-width: 960px) {
     grid-row: 1;
+  }
+  @media screen and (max-width: 580px) {
+    box-shadow: none;
   }
 }
 
@@ -18,6 +20,8 @@
   align-items: center;
 }
 .profileAvatar {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   max-width: 150px;
   width: 100%;
   border-radius: 100px;
@@ -39,10 +43,19 @@
   right: 120px;
 }
 .userNameEmail {
+  margin: 10px 20px;
+  padding: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 580px) {
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+  }
 }
 .userName {
   padding: 0 20px;
@@ -118,6 +131,7 @@
   width: 100%;
   display: flex;
   padding: 10px;
+
   @media screen and (max-width: 591px) {
     width: 95%;
   }
@@ -138,7 +152,7 @@
   grid-template-columns: repeat(3, auto);
 
   justify-content: center;
-  align-items: center;
+  // align-items: center;
 
   padding: 15px 40px;
   margin: 0 auto;
@@ -150,8 +164,9 @@
     grid-template-columns: repeat(1, auto);
     grid-template-rows: repeat(3, auto);
   }
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 620px) {
     height: 100%;
+    margin: 0 0;
     border-radius: 0;
   }
 }
@@ -291,6 +306,7 @@
     grid-column: 2;
     max-width: 600px;
     justify-self: center;
+    margin-top: 50px;
   }
   @media screen and (max-width: 960px) {
     grid-row: 3;
@@ -380,8 +396,9 @@
   justify-content: center;
 }
 .buttonn {
-  @media screen and (min-width: 421px) {
-    display: none;
+  @media screen and (max-width: 580px) {
+    margin-top: 0.8rem;
+    margin-bottom: 15px;
   }
   cursor: pointer;
   font-size: 13px;
