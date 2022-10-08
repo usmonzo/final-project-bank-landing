@@ -75,8 +75,8 @@ export const SecondColumn2 = styled.div`
   width: 100%;
   border-radius: 20px;
   background: #e4eefb;
-  border: 1px solid black;
-  box-shadow: rgb(38, 57, 77) 8px 20px 35px -5px;
+  /* border: 1px solid black; */
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
   margin-bottom: 15px;
   padding: 10px;
   display: flex;

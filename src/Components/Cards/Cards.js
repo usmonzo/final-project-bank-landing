@@ -33,6 +33,7 @@ import chip from "./images/chip.png";
 import visa from "./images/visa.png";
 import indicator from "./images/contactless-indicator.png";
 import logo from "../images/logo.svg";
+import success from "./images/success-svgrepo-com.svg";
 
 import {
   Box,
@@ -252,9 +253,25 @@ function Cards() {
           ) : (
             <>
               <VStack marginBottom={10}>
-                <Box>
-                  <Heading fontWeight="500" fontSize="30px">
-                    ✅ Вы оставили заявку и в скором времени она будет
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    padding: "10px",
+                  }}
+                >
+                  <img src={success} alt="." width={200} />
+                  <Heading
+                    fontWeight="500"
+                    fontSize="30px"
+                    marginTop={10}
+                    textAlign="center"
+                    paddingRight={25}
+                    paddingLeft={25}
+                  >
+                    Вы оставили заявку и в скором времени она будет
                     рассмотрена...
                   </Heading>
                 </Box>
