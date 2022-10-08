@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { ClockLoader } from "react-spinners";
 import styled from "styled-components";
 import Expenses from "../Expenses/Expenses";
 // import image from "../images/logo.svg";
@@ -17,10 +18,22 @@ export const Container = styled.div`
 `;
 
 function UserPage({ Logout }) {
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1300);
+  }, []);
+
   return (
     <Container>
-      {/* <Sidebar Logout={Logout} /> */}
-      <Expenses Logout={Logout} />
+      {loading ? (
+        <ClockLoader color="#ffff" size={100} />
+      ) : (
+        <Expenses Logout={Logout} />
+      )}
     </Container>
   );
 }

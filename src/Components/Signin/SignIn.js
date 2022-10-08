@@ -14,8 +14,9 @@ import {
   IconLogo,
 } from "./SignInElements";
 import logo from "./logo.svg";
+import { Heading } from "@chakra-ui/react";
 
-function SignIn({ Login }) {
+function SignIn({ Login, error }) {
   const [details, setdDetails] = useState({ username: "", password: "" });
 
   const submitHandler = (e) => {
@@ -34,6 +35,16 @@ function SignIn({ Login }) {
                 <IconLogo src={logo} alt="logo" />
               </Icon>
               <FormH1>Войти в учетную запись :</FormH1>
+              {error !== "" ? (
+                <Heading
+                  size="xs"
+                  sx={{ color: "#F50537", paddingBottom: "15px" }}
+                >
+                  Неверный пароль или логин.
+                </Heading>
+              ) : (
+                ""
+              )}
               <FormLabel htmlFor="for">Логин </FormLabel>
               <FormInput
                 type="text"
