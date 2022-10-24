@@ -8,7 +8,7 @@ export const HeaderContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 100px;
-  height: 800px;
+  height: 100vh;
   position: relative;
   z-index: 1;
 
@@ -44,6 +44,8 @@ export const VideoBg = styled.video`
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
+  object-fit: cover;
+  background-size: cover;
   object-fit: cover;
   background: #232e34;
 `;

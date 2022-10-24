@@ -24,7 +24,15 @@ function Header() {
   return (
     <HeaderContainer id="home">
       <HeaderBg>
-        <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
+        <VideoBg
+          autoPlay
+          playsInline
+          loop
+          muted
+          srcmob={Video}
+          src={Video}
+          type="video/mp4"
+        />
       </HeaderBg>
       <HeaderContent>
         <HeaderH1>Банкинг</HeaderH1>

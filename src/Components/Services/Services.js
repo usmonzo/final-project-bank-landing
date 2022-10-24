@@ -22,8 +22,7 @@ function Services() {
           <ServicesIcon src={Icon1} />
           <ServicesH2>Бесплатное обслуживание</ServicesH2>
           <ServicesP>
-            Если хранить от 50 000 ₽ на карте, вкладах, накопительных счетах и в
-            инвестициях.
+            Если хранить от 50 000 ₽ на карте, вкладах, накопительных счетах.
           </ServicesP>
         </ServicesCard>
         <ServicesCard>
